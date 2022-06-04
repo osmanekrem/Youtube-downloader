@@ -181,42 +181,4 @@ form .search button:hover {
 .result ul li a:hover {
   background: #077007;
 }
-
 /*# sourceMappingURL=index.css.map */
-
-.loader {
-  padding-top: 15px;
-  font-size: 20px;
-  letter-spacing: 2px;
-  color: #666;
-}
-
-.search-history{
-  padding-top:20px;
-  margin-top:20px;
-  border-top:1px solid #ddd
-}
-.search-history h4{
-  font-size:24px;
-  font-weight:700;
-  margin-bottom:15px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between
-}
-.search-history h4 button{
-  cursor: pointer;
-  margin-right:10px;
-  height:30px;
-  padding:0 15px;
-  border-radius:30px;
-  background:#ddd;
-  color:#222
-}
-.search-history ul li{
-  cursor:pointer;
-  padding:6px 0
-}
-.search-history ul li:hover{
-  background:#ddd
-}
