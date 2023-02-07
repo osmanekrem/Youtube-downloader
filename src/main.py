@@ -7,7 +7,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/api/youtube')
+@app.route('/youtube')
 def youtube():
     url = request.args.get('url')
     if url:
@@ -31,7 +31,13 @@ def youtube():
                 "size": size(v.filesize),
                 "quality": v.resolution
             })
+        audio = yt.streams.get_audio_only()
+        video["sources"].append({
+                "url": audio.url,
+                "size": size(audio.filesize),
+                "quality": audio.resolution
+            })
         return video
 
 if __name__ == "__main__":
-    app.run(debug=True,)
+    app.run()
