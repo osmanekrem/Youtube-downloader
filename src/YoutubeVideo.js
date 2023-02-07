@@ -17,7 +17,7 @@ function YoutubeVideo ({youtube: {info, sources}}) {
                     <li key={key}>
                         <div className="quality">
                             <span>Kalite</span>
-                            {source.quality}
+                            {source.quality || "Audio"}
                         </div>
                         <div className="size">
                             <span>Boyut</span>

@@ -49,7 +49,7 @@ function App() {
   const download = () => {    
     setLoading(true)
     if(url){
-      fetch(`http://127.0.0.1:5000/api/youtube?url=${url}`)
+      fetch(`http://localhost:5000/youtube?url=${url}`)
       .then(res => res.json())
       .then(data => {
         setLoading(false);

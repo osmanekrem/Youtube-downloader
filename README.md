@@ -6,7 +6,7 @@
 
 ### Start Flask
 ```
-python src/main.py 
+python app.py 
 ```
 
 ### Start React
