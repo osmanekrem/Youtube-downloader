@@ -49,7 +49,7 @@ function App() {
   const download = () => {    
     setLoading(true)
     if(url){
-      fetch(`http://localhost:5000/youtube?url=${url}`)
+      fetch(`https://yt-downloader-07ut.onrender.com/youtube?url=${url}`)
       .then(res => res.json())
       .then(data => {
         setLoading(false);
@@ -61,7 +61,11 @@ function App() {
   return (
     <div className="App">
       <form action="" method="post" onSubmit={e => e.preventDefault()}>
-          <h3>Youtube Downloader</h3>
+        <div className="header">
+
+          <img alt="youtube" className="img" src="/logo512.png" />
+          <h3>YouTube Downloader</h3>
+        </div>
           <div className="search">
               <input type="text" onChange={e => setUrl(e.target.value)} placeholder="Youtube URL"/>
               <button type="submit" onClick={download}>Download</button>
